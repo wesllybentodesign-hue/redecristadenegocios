@@ -61,12 +61,12 @@ body {
 
 .banner:hover img { transform: scale(1.015); }
 
-/* Play button overlay */
+/* Play button overlay — centralizado no meio do banner */
 .play-btn {
   position: absolute;
-  bottom: 88px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +76,7 @@ body {
 }
 
 .play-ring {
-  width: 64px; height: 64px;
+  width: 72px; height: 72px;
   border-radius: 50%;
   border: 1.5px solid rgba(201,168,76,0.7);
   background: rgba(12,12,11,0.55);
@@ -725,10 +725,9 @@ footer {
 <footer>© 2025 Rede Cristã de Negócios · Todos os direitos reservados</footer>
 
 <script>
-/* ─── VÍDEO (Google Drive → embed) ─── */
-// ID do arquivo extraído do link do Google Drive
+/* ─── VÍDEO (Google Drive → embed com autoplay) ─── */
 const VIDEO_ID = '1QMe4cbOuBMy-zcvrGGmDFW_kid-50Sqv';
-const VIDEO_SRC = 'https://drive.google.com/file/d/' + VIDEO_ID + '/preview';
+const VIDEO_SRC = 'https://drive.google.com/file/d/' + VIDEO_ID + '/preview?autoplay=1';
 
 function abrirVideo() {
   document.getElementById('video-frame').src = VIDEO_SRC;
